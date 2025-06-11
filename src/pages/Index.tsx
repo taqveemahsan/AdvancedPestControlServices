@@ -6,28 +6,32 @@ import ServiceCard from "@/components/ServiceCard";
 import FeatureCard from "@/components/FeatureCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
-import { Phone, Shield, Clock, BadgeCheck, Bug, Rat, Sprout, Droplet, FileWarning } from "lucide-react";
+import { Phone, BadgeCheck } from "lucide-react";
 import ImageGallery from "@/components/ImageGallery";
+import { IMAGES } from "@/data/images";
+import { FEATURES, HOME_SERVICES } from "@/data/content";
 
 const Index = () => {
-  // Service images featuring pest control technicians
   const serviceImages = [
     {
-      src: "/lovable-uploads/50e552e9-76e0-4d67-91e5-91e6d8700623.png",
+      src: IMAGES.technician,
       alt: "Pest Control Services",
-      caption: "Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support"
+      caption:
+        "Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support",
     },
     {
-      src: "/lovable-uploads/39bd1d67-7ec3-4a0b-bad9-cd004c02401a.png",
+      src: IMAGES.businessCard,
       alt: "Advanced Pest Control Services Business Card",
-      caption: "Licensed by the Ministry Of Environment Ontario"
+      caption: "Licensed by the Ministry Of Environment Ontario",
     },
     {
-      src: "/lovable-uploads/b01b36be-3fd1-4a90-949d-b227296ae27d.png",
+      src: IMAGES.pestTypes,
       alt: "Pest Types Handled",
-      caption: "We handle all types of pests including bed bugs, cockroaches, ants, and more"
+      caption: "We handle all types of pests including bed bugs, cockroaches, ants, and more",
     },
   ];
+
+  const marketingImages = [IMAGES.pestTypes, IMAGES.guarantee];
   
   return (
     <Layout>
@@ -65,21 +69,14 @@ const Index = () => {
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
-              title="Licensed Technicians" 
-              description="Our professional technicians are fully licensed, insured, and trained in the latest pest control methods."
-              icon={Shield} 
-            />
-            <FeatureCard 
-              title="One-Year Written Warranty" 
-              description="We stand behind our work with comprehensive warranties on our pest control treatments."
-              icon={FileWarning} 
-            />
-            <FeatureCard 
-              title="24/7 Emergency Support" 
-              description="Pest problems don't wait for business hours. Neither do we. Emergency services available."
-              icon={Clock} 
-            />
+            {FEATURES.map((feature) => (
+              <FeatureCard
+                key={feature.title}
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -109,20 +106,11 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="/lovable-uploads/b01b36be-3fd1-4a90-949d-b227296ae27d.png" 
-                alt="Pest Control Services" 
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="/lovable-uploads/a3b1b71d-b743-44ac-8887-5572210b3094.png" 
-                alt="Service Guarantee" 
-                className="w-full h-auto"
-              />
-            </div>
+            {marketingImages.map((src) => (
+              <div key={src} className="rounded-lg overflow-hidden shadow-lg">
+                <img src={src} alt="Marketing" className="w-full h-auto" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -172,9 +160,9 @@ const Index = () => {
               </ul>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="/lovable-uploads/39bd1d67-7ec3-4a0b-bad9-cd004c02401a.png" 
-                alt="Advanced Pest Control Services" 
+              <img
+                src={IMAGES.businessCard}
+                alt="Advanced Pest Control Services"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -193,21 +181,14 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard 
-              title="Bed Bug Control" 
-              description="Advanced treatment methods including steam, Aprehend, and heat treatments for complete bed bug elimination."
-              icon={Bug} 
-            />
-            <ServiceCard 
-              title="Cockroach Treatment" 
-              description="Effective ULV fogging and gel baiting techniques to eradicate cockroach infestations."
-              icon={Bug} 
-            />
-            <ServiceCard 
-              title="Rodent & Mice Control" 
-              description="Comprehensive rodent control strategies including trapping, exclusion, and prevention."
-              icon={Rat} 
-            />
+            {HOME_SERVICES.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+              />
+            ))}
           </div>
 
           <div className="text-center mt-10">
@@ -224,11 +205,7 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="/lovable-uploads/ede58b9a-978f-4799-8d98-e741a3b0ade2.png" 
-              alt="Pest Services" 
-              className="w-full h-auto"
-            />
+            <img src={IMAGES.services} alt="Pest Services" className="w-full h-auto" />
           </div>
         </div>
       </section>
