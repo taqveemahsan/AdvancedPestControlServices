@@ -74,12 +74,10 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="mb-4">
-                Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support
-              </p>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Licensed by the Ministry Of Environment Ontario</li>
-                <li>We handle all types of pests including bed bugs, cockroaches, ants, and more</li>
+                <li>Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support.</li>
+                <li>Licensed by the Ministry Of Environment Ontario.</li>
+                <li>We handle all types of pests including bed bugs, cockroaches, ants, and more.</li>
               </ul>
             </div>
             <div className="flex justify-center md:justify-end">
@@ -94,7 +92,7 @@ const Index = () => {
       </section>
 
       {/* Marketing Materials Showcase */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Professional Pest Control Services</h2>
@@ -111,13 +109,13 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">About Advanced Pest Control</h2>
+            <h2 className="text-3xl font-bold mb-4">About Advanced Pest Control Services</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Advanced Pest Control Services is a locally owned company serving Windsor, Leamington, and surrounding areas. With over 10 years of experience, we provide reliable and affordable pest control solutions for residential and commercial clients.
             </p>
@@ -159,7 +157,7 @@ const Index = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
-                src={IMAGES.businessCard}
+                src={IMAGES.guarantee}
                 alt="Advanced Pest Control Services"
                 className="w-full h-auto object-cover"
               />
@@ -200,13 +198,13 @@ const Index = () => {
       </section>
 
       {/* Additional Marketing Image */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="rounded-lg overflow-hidden shadow-xl">
             <img src={IMAGES.services} alt="Pest Services" className="w-full h-auto" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <section className="py-16">

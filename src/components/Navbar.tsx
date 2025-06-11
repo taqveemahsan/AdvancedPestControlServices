@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-xl md:text-2xl font-poppins font-bold text-pest-blue">
-              Advanced <span className="text-pest-red">Pest Control</span>
+              Advanced <span className="text-pest-red">Pest Control Services</span>
             </span>
           </Link>
 
