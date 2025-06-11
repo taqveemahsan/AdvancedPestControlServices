@@ -7,28 +7,10 @@ import FeatureCard from "@/components/FeatureCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
 import { Phone, BadgeCheck } from "lucide-react";
-import ImageGallery from "@/components/ImageGallery";
 import { IMAGES } from "@/data/images";
 import { FEATURES, HOME_SERVICES } from "@/data/content";
 
 const Index = () => {
-  const serviceImages = [
-    {
-      src: IMAGES.technician,
-      alt: "Pest Control Services",
-      caption: (
-        <>
-          <p>
-            Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support
-          </p>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Licensed by the Ministry Of Environment Ontario</li>
-            <li>We handle all types of pests including bed bugs, cockroaches, ants, and more</li>
-          </ul>
-        </>
-      ),
-    },
-  ];
 
   const marketingImages = [IMAGES.pestTypes, IMAGES.guarantee];
   
@@ -90,7 +72,24 @@ const Index = () => {
             </p>
           </div>
           
-          <ImageGallery images={serviceImages} columns={2} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p className="mb-4">
+                Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support
+              </p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Licensed by the Ministry Of Environment Ontario</li>
+                <li>We handle all types of pests including bed bugs, cockroaches, ants, and more</li>
+              </ul>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <img
+                src={IMAGES.technician}
+                alt="Pest Control Services"
+                className="w-full h-auto md:w-3/4 lg:w-full"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
