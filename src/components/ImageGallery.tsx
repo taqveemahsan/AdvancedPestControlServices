@@ -1,12 +1,12 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ReactNode } from "react";
 
 interface ImageGalleryProps {
   images: {
     src: string;
     alt: string;
-    caption?: string;
+    caption?: ReactNode;
   }[];
   columns?: number;
 }
@@ -27,8 +27,8 @@ const ImageGallery = ({ images, columns = 3 }: ImageGalleryProps) => {
               className="w-full h-auto object-cover"
             />
             {image.caption && (
-              <div className="p-4 bg-white">
-                <p className="text-sm text-gray-700">{image.caption}</p>
+              <div className="p-4 bg-white text-sm text-gray-700 space-y-2">
+                {image.caption}
               </div>
             )}
           </CardContent>
