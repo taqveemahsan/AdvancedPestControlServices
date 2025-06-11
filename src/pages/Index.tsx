@@ -16,18 +16,17 @@ const Index = () => {
     {
       src: IMAGES.technician,
       alt: "Pest Control Services",
-      caption:
-        "Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support",
-    },
-    {
-      src: IMAGES.businessCard,
-      alt: "Advanced Pest Control Services Business Card",
-      caption: "Licensed by the Ministry Of Environment Ontario",
-    },
-    {
-      src: IMAGES.pestTypes,
-      alt: "Pest Types Handled",
-      caption: "We handle all types of pests including bed bugs, cockroaches, ants, and more",
+      caption: (
+        <>
+          <p>
+            Our licensed technicians are trained to handle all pest situations and we offer 24/7 Emergency Support
+          </p>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Licensed by the Ministry Of Environment Ontario</li>
+            <li>We handle all types of pests including bed bugs, cockroaches, ants, and more</li>
+          </ul>
+        </>
+      ),
     },
   ];
 
