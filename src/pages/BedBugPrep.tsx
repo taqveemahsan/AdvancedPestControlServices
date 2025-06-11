@@ -5,35 +5,37 @@ import ImageGallery from "@/components/ImageGallery";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle2 } from "lucide-react";
+import { IMAGES } from "@/data/images";
 
 const BedBugPrep = () => {
   // Images for the gallery
   const marketingImages = [
     {
-      src: "/lovable-uploads/50e552e9-76e0-4d67-91e5-91e6d8700623.png",
+      src: IMAGES.technician,
       alt: "Pest Control Technicians",
-      caption: "Our licensed technicians are trained to handle all pest situations and provide 24/7 Emergency Support"
+      caption:
+        "Our licensed technicians are trained to handle all pest situations and provide 24/7 Emergency Support",
     },
     {
-      src: "/lovable-uploads/39bd1d67-7ec3-4a0b-bad9-cd004c02401a.png",
+      src: IMAGES.businessCard,
       alt: "Advanced Pest Control Services Business Card",
-      caption: "Licensed by the Ministry Of Environment Ontario"
+      caption: "Licensed by the Ministry Of Environment Ontario",
     },
     {
-      src: "/lovable-uploads/b01b36be-3fd1-4a90-949d-b227296ae27d.png",
+      src: IMAGES.pestTypes,
       alt: "Pest Types Handled",
-      caption: "We handle all types of pests including bed bugs, cockroaches, ants, and more"
+      caption: "We handle all types of pests including bed bugs, cockroaches, ants, and more",
     },
     {
-      src: "/lovable-uploads/a3b1b71d-b743-44ac-8887-5572210b3094.png",
+      src: IMAGES.guarantee,
       alt: "Service Guarantee",
-      caption: "Quality Assured and Customer Satisfaction Guaranteed"
+      caption: "Quality Assured and Customer Satisfaction Guaranteed",
     },
     {
-      src: "/lovable-uploads/ede58b9a-978f-4799-8d98-e741a3b0ade2.png",
+      src: IMAGES.services,
       alt: "Pest Services",
-      caption: "Professional services at minimal cost"
-    }
+      caption: "Professional services at minimal cost",
+    },
   ];
 
   return (
