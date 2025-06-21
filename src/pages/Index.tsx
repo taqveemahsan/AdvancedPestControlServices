@@ -201,7 +201,7 @@ const Index = () => {
       {/* Services Video Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">See Our Team In Action</h2>
+          <h2 className="text-3xl font-bold mb-6">See how our team drives success</h2>
           <div className="flex justify-center">
             <video
               src={VIDEOS.pestServices}
