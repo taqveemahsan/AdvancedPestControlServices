@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Phone, BadgeCheck } from "lucide-react";
 import { IMAGES } from "@/data/images";
 import { VIDEOS } from "@/data/media";
-import VideoModal from "@/components/VideoModal";
 import { FEATURES, HOME_SERVICES } from "@/data/content";
 
 const Index = () => {
@@ -203,10 +202,13 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">See Our Team In Action</h2>
-          <VideoModal
-            src={VIDEOS.pestServices}
-            buttonText="Watch Our Services Video"
-          />
+          <div className="flex justify-center">
+            <video
+              src={VIDEOS.pestServices}
+              controls
+              className="w-full max-w-3xl rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       </section>
 
