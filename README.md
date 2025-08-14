@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
+# Advanced Pest Control Services
 
-## Project info
+Professional pest control solutions for Windsor, Leamington & surrounding areas in Ontario, Canada.
 
-**URL**: https://lovable.dev/projects/9bcdc51b-3d95-4f14-ab2f-278c6a95ce65
+## About
 
-## How can I edit this code?
+Advanced Pest Control Services is a locally owned company providing reliable and affordable pest control solutions for residential and commercial clients. With over 10 years of experience, we specialize in eliminating all types of pests with licensed, insured, and eco-friendly methods.
 
-There are several ways of editing your application.
+## Services
 
-**Use Lovable**
+- **Bed Bug Treatment** - Complete elimination with professional-grade solutions
+- **Ant Control** - Targeted treatments for all ant species
+- **Cockroach Extermination** - Thorough inspection and elimination
+- **Mouse & Rat Control** - Humane and effective rodent removal
+- **Wasp & Bee Removal** - Safe removal and prevention
+- **Commercial Pest Control** - Customized solutions for businesses
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9bcdc51b-3d95-4f14-ab2f-278c6a95ce65) and start prompting.
+## Why Choose Us?
 
-Changes made via Lovable will be committed automatically to this repo.
+- ✅ **Licensed & Insured** - Licensed by Ministry of Environment Ontario
+- ✅ **24/7 Emergency Support** - Available when you need us most  
+- ✅ **Guaranteed Results** - All treatments come with warranties
+- ✅ **Eco-Friendly Options** - Safe for family and pets
+- ✅ **Competitive Pricing** - No hidden fees or charges
 
-**Use your preferred IDE**
+## Contact Information
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+📞 **Phone**: 226-350-4828  
+🌐 **Service Areas**: Windsor, Leamington & surrounding areas  
+📧 **Get Quote**: Contact us for free estimates
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Technologies Used
 
-Follow these steps:
+This website is built with modern web technologies:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **React** - Modern UI library for interactive components
+- **TypeScript** - Type-safe JavaScript for better development
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **Vite** - Fast build tool and development server
+- **shadcn-ui** - Beautiful and accessible UI components
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+To run this project locally:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to project directory
+cd AdvancedPestControlServices
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9bcdc51b-3d95-4f14-ab2f-278c6a95ce65) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- `/src/pages` - Main page components
+- `/src/components` - Reusable UI components
+- `/src/data` - Static data and content
+- `/public` - Static assets and media files
