@@ -6,12 +6,22 @@ import ServiceCard from "@/components/ServiceCard";
 import FeatureCard from "@/components/FeatureCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
-import { Phone, BadgeCheck } from "lucide-react";
+import { Phone, BadgeCheck, Play, X } from "lucide-react";
 import { IMAGES } from "@/data/images";
 import { VIDEOS } from "@/data/media";
 import { FEATURES, HOME_SERVICES } from "@/data/content";
+import { useState } from "react";
 
 const Index = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const marketingImages = [IMAGES.pestTypes, IMAGES.guarantee];
   
@@ -203,14 +213,49 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">See how our team drives success</h2>
           <div className="flex justify-center">
-            <video
-              src={VIDEOS.pestServices}
-              controls
-              className="w-full max-w-3xl rounded-lg shadow-lg"
-            />
+            <div className="relative w-full max-w-3xl cursor-pointer group" onClick={handleOpenModal}>
+              <img
+                src="/lovable-uploads/VideoThumbnail.png"
+                alt="Video Thumbnail"
+                className="w-full rounded-lg shadow-lg"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/80 rounded-full p-6 group-hover:bg-white/90 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <Play className="w-12 h-12 text-pest-blue ml-1" fill="currentColor" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          onClick={handleCloseModal}
+        >
+          <div 
+            className="relative w-full max-w-5xl bg-black rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <video
+                src={VIDEOS.pestServices}
+                controls
+                autoPlay
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Additional Marketing Image */}
       {/* <section className="py-16">
